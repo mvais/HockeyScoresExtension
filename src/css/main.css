@@ -6,9 +6,12 @@ header {
 
 .match-card {
   height: 100%;
+  font-size: .9rem;
   margin-top: 2em;
   margin-bottom: 2em;
   border-left: 1px solid rgb(150, 152, 200);
+  padding-right: 1em;
+  padding-bottom: 10px;
 }
 
 .no-match-card {
@@ -19,7 +22,7 @@ header {
 }
 
 .row {
-  padding-left: 12.5%;
+  padding-left: 10%;
   padding-right: 10%;
 }
 
@@ -38,10 +41,6 @@ header {
 
 .row > img {
   padding-right: 0;
-}
-
-.team {
-  padding-left: 0;
 }
 
 .logo {
@@ -79,4 +78,8 @@ input {
   background-color: rgb(244, 244, 249);
   border: none;
   text-align: center;
+}
+
+.away-team {
+  margin-top: 10px;
 }
