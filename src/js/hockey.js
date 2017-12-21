@@ -29,13 +29,13 @@ var createNHLGame = function(game) {
       <div class="row match-status"><div class="col-12 text-center">${game['status']['abstractGameState']}</div></div>
       <div class="row team home-team">
           <img class="col-lg-2 col-sm-2 logo" src="assets/${fetchSVG(game['teams']['away']['team']['name'])}" onerror="javascript:this.src='assets/NHL.svg'" alt="logo">
-          <div class="col-lg-8 col-sm-8">${game['teams']['away']['team']['name']}</div>
-          <div class="col-lg-2 col-sm-2 text-center">${game['teams']['away']['score']}</div>
+          <div class="col-lg-9 col-sm-8 team-name">${game['teams']['away']['team']['name']}</div>
+          <div class="col-lg-1 col-sm-2 team-score text-center">${game['teams']['away']['score']}</div>
       </div>
       <div class="row team away-team">
           <img class="col-lg-2 col-sm-2 logo" src="assets/${fetchSVG(game['teams']['home']['team']['name'])}" onerror="javascript:this.src='assets/NHL.svg'" alt="logo">
-          <div class="col-lg-8 col-sm-8">${game['teams']['home']['team']['name']}</div>
-          <div class="col-lg-2 col-sm-2 text-center">${game['teams']['home']['score']}</div>
+          <div class="col-lg-9 col-sm-8 team-name">${game['teams']['home']['team']['name']}</div>
+          <div class="col-lg-1 col-sm-2 team-score text-center">${game['teams']['home']['score']}</div>
       </div>
     </div>`
   );

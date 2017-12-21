@@ -24,23 +24,24 @@ header {
 .row {
   padding-left: 10%;
   padding-right: 10%;
+  margin: 0;
 }
 
-#games > .row:nth-child(even) {
-  background-color: rgb(244, 244, 249);
+.row > img {
+  padding-right: 0;
+  padding-left: 0;
 }
 
 .row > div:first-child {
   padding: 0;
 }
 
-.team > .col-8 {
-  font-weight: bold;
-  padding-left: 0;
+#games > .row:nth-child(even) {
+  background-color: rgb(244, 244, 249);
 }
 
-.row > img {
-  padding-right: 0;
+.team > .col-lg-8 {
+  font-weight: bold;
 }
 
 .logo {
@@ -82,4 +83,16 @@ input {
 
 .away-team {
   margin-top: 10px;
+}
+
+.team-score {
+  padding: 0;
+}
+
+.team-name {
+  font-weight: bold;
+}
+
+.team {
+  padding-left: 0;
 }
