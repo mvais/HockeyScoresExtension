@@ -1,0 +1,60 @@
+header {
+  height: 200px;
+  padding-top: 1.5em;
+  background-color:rgb(244, 244, 249);
+}
+
+.match-card {
+  height: 100%;
+  margin-top: 2em;
+  margin-bottom: 2em;
+  border-left: 1px solid rgb(150, 152, 200);
+}
+
+.row {
+  padding-left: 12.5%;
+  padding-right: 10%;
+}
+
+#games > .row:nth-child(even) {
+  background-color: rgb(244, 244, 249);
+}
+
+.row > div:first-child {
+  padding: 0;
+}
+
+.team > .col-8 {
+  font-weight: bold;
+  padding-left: 0;
+}
+
+.row > img {
+  padding-right: 0;
+}
+
+.team {
+  padding-left: 0;
+}
+
+.logo {
+  height: 20px;
+}
+
+.match-status {
+  padding-bottom: 10px;
+  font-weight: bold;
+  opacity: .5;
+}
+
+.date-year {
+  text-align: center;
+}
+
+.date-month {
+  text-align: center;
+}
+
+.date-day {
+  text-align:center;
+}
