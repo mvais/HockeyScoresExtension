@@ -11,6 +11,13 @@ header {
   border-left: 1px solid rgb(150, 152, 200);
 }
 
+.no-match-card {
+  height: 100%;
+  margin-top: 2em;
+  margin-bottom: 2em;
+  border-left: 1px solid rgb(150, 152, 200);
+}
+
 .row {
   padding-left: 12.5%;
   padding-right: 10%;
@@ -57,4 +64,19 @@ header {
 
 .date-day {
   text-align:center;
+}
+
+.fa-arrow-up, .fa-arrow-down {
+  color: rgb(50, 60, 120);
+}
+
+.fa-arrow-up:hover, .fa-arrow-down:hover {
+  opacity: .5;
+}
+
+input {
+  width: 4em;
+  background-color: rgb(244, 244, 249);
+  border: none;
+  text-align: center;
 }
