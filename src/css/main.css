@@ -6,46 +6,30 @@ header {
 
 .match-card {
   height: 100%;
-  font-size: .9rem;
-  margin-top: 2em;
-  margin-bottom: 2em;
+  font-size: .91rem;
+  margin: 2em 0 2em 0;
   border-left: 1px solid rgb(150, 152, 200);
-  padding-right: 1em;
-  padding-bottom: 10px;
+  padding: 0 0 1em 0;
 }
 
 .no-match-card {
   height: 100%;
-  margin-top: 2em;
-  margin-bottom: 2em;
-  border-left: 1px solid rgb(150, 152, 200);
-}
-
-.row {
-  padding-left: 10%;
-  padding-right: 10%;
-  margin: 0;
-}
-
-.row > img {
-  padding-right: 0;
-  padding-left: 0;
-}
-
-.row > div:first-child {
-  padding: 0;
-}
-
-#games > .row:nth-child(even) {
-  background-color: rgb(244, 244, 249);
-}
-
-.team > .col-lg-8 {
-  font-weight: bold;
+  margin: 2em 0 2em 0;
 }
 
 .logo {
   height: 20px;
+  padding-right: 0;
+  padding-left: 0;
+}
+
+.row {
+  padding: 0 3em 0 4em;
+  margin: 0;
+}
+
+#games > .row:nth-child(even) {
+  background-color: rgb(244, 244, 249);
 }
 
 .match-status {
@@ -54,31 +38,33 @@ header {
   opacity: .5;
 }
 
-.date-year {
+.date-year, .date-month, .date-day {
   text-align: center;
+  display: inline-block;
+  margin-top: 10px;
 }
 
-.date-month {
-  text-align: center;
+.date-month input {
+  width: 2em;
 }
 
-.date-day {
-  text-align:center;
-}
-
-.fa-arrow-up, .fa-arrow-down {
-  color: rgb(50, 60, 120);
-}
-
-.fa-arrow-up:hover, .fa-arrow-down:hover {
-  opacity: .5;
+.date-day input {
+  width: 2em;
 }
 
 input {
-  width: 4em;
-  background-color: rgb(244, 244, 249);
+  width: 2.5em;
   border: none;
   text-align: center;
+  background-color: rgb(244, 244, 249);
+}
+
+.fa-angle-down, .fa-angle-up{
+  color: rgb(50, 60, 120);
+}
+
+.fa-angle-up:hover, .fa-angle-down:hover {
+  opacity: .5;
 }
 
 .away-team {
@@ -91,6 +77,7 @@ input {
 
 .team-name {
   font-weight: bold;
+  padding-left: 0;
 }
 
 .team {
