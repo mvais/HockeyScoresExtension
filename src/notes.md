@@ -1,8 +1,8 @@
 # TODO
- - Handle case when logo not available (default to NHL Logo)
- - Improve error handling on date picker
- - Add start time, current time, period, etc.
- - Improve when window is extremely small (nearly done)
+ - Improve Error Handling
+ - Handle Cases For Unavailable Logos
 
-# Useful Links
-- [Collapsable Dropdown](https://v4-alpha.getbootstrap.com/components/collapse/#example)
+# Feature Wishlist
+ - Hide Favorite Team's Score
+ - Allow Custom Date Input (Disabled currently)
+ - Show More Detailed Statuses of Game (Start Time, OT, Periods, etc.)
