@@ -83,3 +83,7 @@ input {
 .team {
   padding-left: 0;
 }
+
+input[disabled] {
+  color: black;
+}
