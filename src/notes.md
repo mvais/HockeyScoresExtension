@@ -1,6 +1,5 @@
 # TODO
- - Improve Error Handling
- - Handle Cases For Unavailable Logos
+ - Improve error handling
 
 # Feature Wishlist
  - Hide Favorite Team's Score

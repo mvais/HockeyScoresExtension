@@ -14,12 +14,12 @@ var createNHLGame = function(game) {
     `<div class="col-lg-4 col-sm-12 col-12 match-card">
       <div class="row match-status"><div class="col-12 text-center">${game['status']['abstractGameState']}</div></div>
       <div class="row team home-team">
-          <img class="col-lg-2 col-sm-2 col-2 logo" src="assets/${formatLogo(game['teams']['away']['team']['name'])}" alt="logo">
+          <img class="col-lg-2 col-sm-2 col-2 logo" src="assets/${fetchLogoPaths(game['teams']['away']['team']['name'])}">
           <div class="col-lg-9 col-sm-8 col-8 team-name">${game['teams']['away']['team']['name']}</div>
           <div class="col-lg-1 col-sm-2 col-2 team-score text-center">${game['teams']['away']['score']}</div>
       </div>
       <div class="row team away-team">
-          <img class="col-lg-2 col-sm-2 col-2 logo" src="assets/${formatLogo(game['teams']['home']['team']['name'])}" alt="logo">
+          <img class="col-lg-2 col-sm-2 col-2 logo" src="assets/${fetchLogoPaths(game['teams']['home']['team']['name'])}">
           <div class="col-lg-9 col-sm-8 col-8 team-name">${game['teams']['home']['team']['name']}</div>
           <div class="col-lg-1 col-sm-2 col-2 team-score text-center">${game['teams']['home']['score']}</div>
       </div>
@@ -36,8 +36,12 @@ var createNoScheduledGames = function() {
   ));
 }
 
-var formatLogo = function(teamName) {
-  return teamName.split(" ").join('_') + ".svg";
+var fetchLogoPaths = function(teamName) {
+
+  if (logoPaths[teamName]) {
+    return logoPaths[teamName];
+  }
+  return 'NHL.svg';
 }
 
 var formatAPI = function() {
@@ -102,6 +106,12 @@ document.getElementById('increaseMonth').onclick = function(element) {
 
   document.getElementById('selected-month').value = parseInt(value) + 1;
   month = value + 1;
+
+  if (day > new Date(year, month, 0).getDate()) {
+    day = new Date(year, month, 0).getDate();
+    document.getElementById('selected-day').value = new Date(year, month, 0).getDate();
+  }
+
   loadSchedule();
 }
 
@@ -112,6 +122,12 @@ document.getElementById('decreaseMonth').onclick = function(element) {
   }
   document.getElementById('selected-month').value = value - 1;
   month = value - 1;
+
+  if (day > new Date(year, month, 0).getDate()) {
+    day = new Date(year, month, 0).getDate();
+    document.getElementById('selected-day').value = new Date(year, month, 0).getDate();
+  }
+
   loadSchedule();
 }
 
@@ -139,4 +155,40 @@ document.getElementById('decreaseDay').onclick = function(element) {
   document.getElementById('selected-day').value = parseInt(value) - 1;
   day = value - 1;
   loadSchedule();
+}
+
+logoPaths = {
+  "Anaheim Ducks": "Anaheim_Ducks.svg",
+  "Arizona Coyotes": "Arizona_Coyotes.svg",
+  "Boston Bruins" : "Boston_Bruins.svg",
+  "Buffalo Sabres" : "Buffalo_Sabres.svg",
+  "Calgary Flames" : "Calgary_Flames.svg",
+  "Carolina Hurricanes" : "Carolina_Hurricanes.svg",
+  "Chicago Blackhawks" : "Chicago_Blackhawks.svg",
+  "Colorado Avalanche" : "Colorado_Avalanche.svg",
+  "Columbus Blue Jackets" : "Columbus_Blue_Jackets.svg",
+  "Dallas Stars" : "Dallas_Stars.svg",
+  "Detroit Red Wings" : "Detroit_Red_Wings.svg",
+  "Edmonton Oilers" : "Edmonton_Oilers.svg",
+  "Florida Panthers" : "Florida_Panthers.svg",
+  "Los Angeles Kings" : "Los_Angeles_Kings.svg",
+  "Minnesota Wild" : "Minnesota_Wild.svg",
+  "Montréal Canadiens" : "Montréal_Canadiens.svg",
+  "Nashville Predators" : "Nashville_Predators.svg",
+  "New Jersey Devils" : "New_Jersey_Devils.svg",
+  "New York Islanders" : "New_York_Islanders.svg",
+  "New York Rangers" : "New_York_Rangers.svg",
+  "Ottawa Senators" : "Ottawa_Senators.svg",
+  "Philadelphia Flyers" : "Philadelphia_Flyers.svg",
+  "Phoenix Coyotes" : "Phoenix_Coyotes.svg",
+  "Pittsburgh Penguins" : "Pittsburgh_Penguins.svg",
+  "San Jose Sharks" : "San_Jose_Sharks.svg",
+  "St. Louis Blues" : "St._Louis_Blues.svg",
+  "Tampa Bay Lightning" : "Tampa_Bay_Lightning.svg",
+  "Toronto Maple Leafs" : "Toronto_Maple_Leafs.svg",
+  "Vancouver Canucks" : "Vancouver_Canucks.svg",
+  "Vegas Golden Knights" : "Vegas_Golden_Knights.svg",
+  "Washington Capitals" : "Washington_Capitals.svg",
+  "Winnipeg Jets" : "Winnipeg_Jets.svg",
+  "Winnipeg Jets (1979)" : "Winnipeg_Jets_(1979).svg"
 }

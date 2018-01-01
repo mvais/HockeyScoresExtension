@@ -10,5 +10,12 @@
     "tabs",
     "http://*.nhle.com/*"
   ],
+  "browser_action": {
+    "default_icon": "src/assets/logo_48.png"
+  },
+  "icons": {
+    "48": "src/assets/logo_48.png",
+    "128": "src/assets/logo_128.png"
+  },
   "content_security_policy": "script-src 'self' https://code.jquery.com https://cdnjs.cloudflare.com https://maxcdn.bootstrapcdn.com; object-src 'self'"
 }
