@@ -2,7 +2,7 @@
   "manifest_version": 2,
   "name": "Hockey Scores Viewer",
   "description": "This extension allows you to view what games are going on in a new tab",
-  "version": "1.1",
+  "version": "1.2",
   "chrome_url_overrides" : {
     "newtab": "src/index.html"
   },
