@@ -175,7 +175,7 @@ logoPaths = {
   "Florida Panthers" : "Florida_Panthers.svg",
   "Los Angeles Kings" : "Los_Angeles_Kings.svg",
   "Minnesota Wild" : "Minnesota_Wild.svg",
-  "Montréal Canadiens" : "Montréal_Canadiens.svg",
+  "Montréal Canadiens" : "Montreal_Canadiens.svg",
   "Nashville Predators" : "Nashville_Predators.svg",
   "New Jersey Devils" : "New_Jersey_Devils.svg",
   "New York Islanders" : "New_York_Islanders.svg",
