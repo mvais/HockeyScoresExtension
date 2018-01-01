@@ -37,9 +37,6 @@ var createNoScheduledGames = function() {
 }
 
 var fetchLogoPaths = function(teamName) {
-
-  console.log(teamName);
-
   if (logoPaths[teamName]) {
     return logoPaths[teamName];
   }
