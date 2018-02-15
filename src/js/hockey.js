@@ -11,25 +11,25 @@ window.onload = function() {
 
 var createNHLGame = function(game) {
   return document.createRange().createContextualFragment(
-    `<div class="col-lg-4 col-sm-12 col-12 match-card">
-      <div class="row match-status"><div class="col-12 text-center">${game['status']['abstractGameState']}</div></div>
-      <div class="row team home-team">
-          <img class="col-lg-2 col-sm-2 col-2 logo" src="assets/${fetchLogoPaths(game['teams']['away']['team']['name'])}">
-          <div class="col-lg-9 col-sm-8 col-8 team-name">${game['teams']['away']['team']['name']}</div>
-          <div class="col-lg-1 col-sm-2 col-2 team-score text-center">${game['teams']['away']['score']}</div>
+    `<div class="game">
+      <span class="status">${game['status']['abstractGameState']}</span>
+      <div class="team">
+          <img class="logo" src="assets/${fetchLogoPaths(game['teams']['away']['team']['name'])}">
+          <div class="name">${game['teams']['away']['team']['name']}</div>
+          <div class="score">${game['teams']['away']['score']}</div>
       </div>
-      <div class="row team away-team">
-          <img class="col-lg-2 col-sm-2 col-2 logo" src="assets/${fetchLogoPaths(game['teams']['home']['team']['name'])}">
-          <div class="col-lg-9 col-sm-8 col-8 team-name">${game['teams']['home']['team']['name']}</div>
-          <div class="col-lg-1 col-sm-2 col-2 team-score text-center">${game['teams']['home']['score']}</div>
+      <div class="team">
+          <img class="logo" src="assets/${fetchLogoPaths(game['teams']['home']['team']['name'])}">
+          <div class="name">${game['teams']['home']['team']['name']}</div>
+          <div class="score">${game['teams']['home']['score']}</div>
       </div>
     </div>`
   );
 }
 
 var createNoScheduledGames = function() {
-  document.getElementById('games').innerHTML = '';
-  document.getElementById('games').appendChild(document.createRange().createContextualFragment(
+  document.getElementById('container').innerHTML = '';
+  document.getElementById('container').appendChild(document.createRange().createContextualFragment(
     `<div class="container text-center">
       <h2 class="no-match-card">No Scheduled Games</h2>
      </div>`
@@ -65,20 +65,11 @@ var loadSchedule = function() {
 }
 
 var createNHLGames = function(games) {
-  var gamesElt = document.getElementById('games');
-  var row = document.createElement('div');
+  document.getElementById('container').innerHTML = '';
 
-  gamesElt.innerHTML = '';
-  row.className = 'row';
-  while (games.length) {
-    row.appendChild(createNHLGame(games.shift()));
-    if (row.childNodes.length == 3) {
-      gamesElt.appendChild(row);
-      row = document.createElement('div');
-      row.className = 'row';
-    }
+  for (let game of games) {
+    document.getElementById('container').appendChild(createNHLGame(game));
   }
-  gamesElt.appendChild(row);
 }
 
 // Date Selection Code
