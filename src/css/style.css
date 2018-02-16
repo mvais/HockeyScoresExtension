@@ -63,7 +63,6 @@ input {
 #container {
   display: grid;
   margin: 20px 40px 40px 40px;
-  grid-row-gap: 1em;
 }
 
 .game {
@@ -151,7 +150,7 @@ input {
   }
 
   .game:nth-child(odd) {
-    background-color: rgb(244, 244, 249);    
+    background-color: rgb(244, 244, 249);
   }
 }
 
@@ -171,7 +170,7 @@ input {
   .name {
     display: none;
   }
-  
+
   .abbr {
     display: inline-block;
   }
