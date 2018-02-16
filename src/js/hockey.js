@@ -54,8 +54,10 @@ var loadSchedule = function() {
     if (xhr.status == 200) {
       if (JSON.parse(xhr.response)['dates'][0]) {
         createNHLGames(JSON.parse(xhr.response)['dates'][0]['games']);
+        setTimeout(loadSchedule, 30000);
       } else {
         createNoScheduledGames();
+        setTimeout(loadSchedule, 30000);
       }
     } else {
       console.log("Error Loading Games");
