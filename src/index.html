@@ -3,32 +3,31 @@
     <head>
         <meta charset="utf-8" />
         <title>NHL Scores</title>
-        <link rel="stylesheet" href="css/main.css">
         <link rel="stylesheet" href="css/style.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     </head>
     <body>
         <header>
             <h1>HOCKEY SCORES</h1>
-            <div>
+            <div class="date-selector">
                 <div class="date-year">
-                    <i class="fa fa-2x fa-angle-up" id="increaseYear" aria-hidden="true"></i>
+                    <i class="fa fa-3x fa-angle-up" id="increaseYear" aria-hidden="true"></i>
                     <h2><input id="selected-year" disabled></h2>
-                    <i class="fa fa-2x fa-angle-down" id="decreaseYear" aria-hidden="true"></i>
+                    <i class="fa fa-3x fa-angle-down" id="decreaseYear" aria-hidden="true"></i>
                 </div>
                 <div class="date-month">
-                    <i class="fa fa-2x fa-angle-up" id="increaseMonth" aria-hidden="true"></i>
+                    <i class="fa fa-3x fa-angle-up" id="increaseMonth" aria-hidden="true"></i>
                     <h2> / <input id="selected-month" disabled> / </h2>
-                    <i class="fa fa-2x fa-angle-down" id="decreaseMonth" aria-hidden="true"></i>
+                    <i class="fa fa-3x fa-angle-down" id="decreaseMonth" aria-hidden="true"></i>
                 </div>
                 <div class="date-day">
-                    <i class="fa fa-2x fa-angle-up" id="increaseDay" aria-hidden="true"></i>
+                    <i class="fa fa-3x fa-angle-up" id="increaseDay" aria-hidden="true"></i>
                     <h2><input id="selected-day" disabled></h2>
-                    <i class="fa fa-2x fa-angle-down" id="decreaseDay" aria-hidden="true"></i>
+                    <i class="fa fa-3x fa-angle-down" id="decreaseDay" aria-hidden="true"></i>
                 </div>
             </div>
         </header>
-
+    
         <div id="container"></div>
         <script src="js/hockey.js"></script>
         <script src="js/data.js"></script>

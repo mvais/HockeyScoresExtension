@@ -32,9 +32,7 @@ var createNHLGame = function(game) {
 var createNoScheduledGames = function() {
   document.getElementById('container').innerHTML = '';
   document.getElementById('container').appendChild(document.createRange().createContextualFragment(
-    `<div class="container text-center">
-      <h2 class="no-match-card">No Scheduled Games</h2>
-     </div>`
+    `<div></div><h2 class="no-match-card">No Scheduled Games</h2><div></div>`
   ));
 }
 

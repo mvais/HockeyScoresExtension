@@ -28,7 +28,7 @@ teams = {
       abbr: "CHI"
     },
     "Colorado Avalanche" : {
-      logo: "Colorado_Avalance.svg",
+      logo: "Colorado_Avalanche.svg",
       abbr: "COL"
     },
     "Columbus Blue Jackets" : {
