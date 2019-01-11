@@ -1,7 +1,6 @@
-# HockeyScoresExtension
+## hockey-scores-extension
 
-This is a simple chrome/firefox extension that opens up in a new tab. It will show all the scores for the games of a given day.
-Future versions will allow users to hide scores of teams to avoid spoilers.
+A simple chrome/firefox extension that allows users to view scores of any given day and the schedule of upcoming games. You can find the chrome extension [here](https://chrome.google.com/webstore/detail/hockey-scores-viewer/ibjgdiomocakahljoligidkkijepblkb?hl=en). 
 
 
 
